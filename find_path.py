@@ -64,7 +64,7 @@ class Game():
                 self.visited[0] += 1
             self.visited[1].add(self.cpos)
             self.path.append(self.lastMove[0])
-            # print('Turn finished', self.cpos, self.lastMove)
+            # print('Step finished', self.cpos, self.lastMove)
             # time.sleep(0.5)
             if self.visited[0] > 4 * len(self.visited[1]):
                 return ['LOOP']
