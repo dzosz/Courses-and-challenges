@@ -13,7 +13,7 @@ class Game():
         self.moves = [
             ('SOUTH', (1, 0)), ('EAST', (0, 1)),
             ('NORTH', (-1, 0)), ('WEST', (0, -1))
-            ]
+        ]
         self.visited = [0, set()]
         self.path = []
 
