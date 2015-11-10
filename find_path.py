@@ -1,7 +1,7 @@
-# import time
-
-
 class Game():
+    """
+    Finds exit in current loaded map.
+    """
 
     def __init__(self, themap, cpos, end, **kwargs):
         self.themap = themap
@@ -18,6 +18,7 @@ class Game():
         self.path = []
 
     def validate_move(self, move):
+        """Check the ground for next move."""
         y, x = (self.cpos[0] + move[0], self.cpos[1] + move[1])
         if self.breaker and self.themap[y][x] == 'X':
             self.themap[y][x] = ' '
@@ -26,12 +27,14 @@ class Game():
         return (y, x)
 
     def teleport(self):
+        """Moves player to second teleport on the map."""
         for tp in self.tps:
             if tp != self.cpos:
                 self.cpos = tp
                 return True
 
     def check_field(self):
+        """Pick the right action according to current tile type."""
         y, x = self.cpos
         char = self.themap[y][x]
         if char == 'B':
@@ -47,6 +50,7 @@ class Game():
                     return True
 
     def get_action(self):
+        """Loops over possible moves and returns the right one."""
         if not (self.lastMove and self.validate_move(self.lastMove[1])):
             for move in self.moves:
                 if self.validate_move(move[1]):
@@ -58,6 +62,7 @@ class Game():
             return True
 
     def get_path(self):
+        """Returns the path after reaching the exit."""
         while self.cpos != self.end:
             self.check_field()
             self.get_action()
@@ -93,4 +98,4 @@ cpos, end, tps = (2, 3), (12, 13), [(8, 7), (10, 10)]
 
 tomek = Game(themap, cpos, end, tps=tps)
 
-print(*tomek.get_path(), sep = '\n')
+print(*tomek.get_path(), sep='\n')
