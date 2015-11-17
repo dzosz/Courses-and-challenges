@@ -1,21 +1,4 @@
-# Solution for Bender-a-depressed-robot
-CodinGame challenge in Python  
-Solves this and other problems  
+# Courses and challenges
 
-> ```
-> ###############
-> #      IXXXXX #
-> #  @          #
-> #             #
-> #             #
-> #  I          #
-> #  B          #
-> #  B   S     W#
-> #  B   T      #
-> #             #
-> #         T   #
-> #         B   #
-> #            $#
-> #        XXXX #
-> ###############
-> ```
+* Algorithms: Design and Analysis at Stanford (Cousera)
+* CodinGame programming challenges www.codingame.com
