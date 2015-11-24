@@ -40,7 +40,7 @@ def dijkstra_cost(goals, options):
 
 if __name__ == '__main__':
     # load nodes to dictionaries
-    with open('data/Q5 test5.txt') as f:
+    with open('data/Q5 test7.txt') as f:
         G = defaultdict(list)
         for row in f:
             parent, *pairs = row.split()
@@ -55,8 +55,8 @@ if __name__ == '__main__':
     start = 1
     options = [(0, start, [])]
     costs = {}
-    find_path_for = list(G.keys())
-    # find_path_for = [7,37,59,82,99,115,133,165,188,197]
+    find_path_for = [5, 10, 15, 34]
+    # find_path_for = list(G.keys())
 
     print('The minimum costs are:')
     # loop over function that yields finished goals

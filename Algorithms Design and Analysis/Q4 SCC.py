@@ -12,7 +12,7 @@ import logging
 import time
 
 # PATH FOR DATA FILE
-filename = 'data/test4_pa4.txt'
+filename = 'data/Q4 test2.txt'
 
 # Change loggin level to DEBUG if you want to see order of removed nodes
 logging.basicConfig(format='%(message)s', level=logging.INFO)
