@@ -12,7 +12,7 @@ import logging
 import time
 
 # PATH FOR DATA FILE
-filename = 'data/SCC.txt'
+filename = 'data/test4_pa4.txt'
 
 # Change loggin level to DEBUG if you want to see order of removed nodes
 logging.basicConfig(format='%(message)s', level=logging.INFO)
@@ -27,7 +27,7 @@ def get_child(parent, graph):
 
 def dfs(parent):
     visited.add(parent)
-    stack.append(parent)    
+    stack.append(parent)
     logging.debug('\nDFS of %s' % parent)
 
     while stack:
@@ -37,9 +37,9 @@ def dfs(parent):
             parent = stack.pop()
             logging.debug('End for %s' % parent)
             order.append(parent)
-            continue    
+            continue
         # logging.info('Analyzing %s' % child)
-        stack.append(child)     
+        stack.append(child)
         visited.add(child)
 
 
@@ -54,10 +54,10 @@ def dfs2(parent):
         if not child:
             parent = stack.pop()
             continue
-        stack.append(child)     
+        stack.append(child)
         visited.add(child)
         size += 1
-    return size    
+    return size
 
 G = defaultdict(list)
 Gr = defaultdict(list)
