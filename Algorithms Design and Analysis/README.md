@@ -1,8 +1,8 @@
 # Algorithms: Design and Analysis at Stanford University (Coursera)
 
 ##Programming Question 4
-Find SCCs in a given graph  
-Time execution: 18 seconds (DFS) + 13 seconds (data read) with 5 M rows
+Find five largest strongly connected components (SCCs) in a given graph  
+Time execution: 18 seconds (DFS) + 13 seconds (data read) with 5 M edges.
 
 ##Programming Question 5
 Find shortest path and it's cost in given undirected weighted graph with 200 vertices.  
